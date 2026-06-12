@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORTFOLIO — HUMAN OPERATING SYSTEM v2.2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="scan-line"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="coord-readout" id="coordReadout">X:0000 Y:0000</div>
+<div class="standout-bar">PORTFOLIO DOCUMENT REV.2.2 — OPEN FOR OPPORTUNITIES</div>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-id">HOS v2.2</span>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">ABOUT</a>
+    <a href="#experience">EXP</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#writing">WRITING</a>
+    <a href="#after">SIDE QUESTS</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    <span class="nav-status-text">AVAILABLE</span>
+  </div>
+</nav>
+
+<div class="content">
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 00 — IDENTITY MODULE</span>
+  <span class="sec-num">FIG.0.0</span>
+
+  <div class="hero-left">
+    <span class="hero-tag">// HUMAN OPERATING SYSTEM — DOCUMENTATION</span>
+    <h1 class="hero-name">VIDHISHA<br>KATARIYA</h1>
+    <p class="hero-subtitle">AI Engineer · Data Scientist · Design Technologist</p>
+    <p class="hero-desc">Building at the intersection of machine intelligence, systems design, and human experience. Fluent in data, fluent in pixels.</p>
+    <div class="hero-coords">
+      <div class="coord-item">STATUS: <span>ACTIVE</span></div>
+      <div class="coord-item">MODE: <span>BUILDER</span></div>
+      <div class="coord-item">LOC: <span>INDIA</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">VIEW WORK ↗</a>
+      <a href="#contact" class="btn-ghost">INITIATE CONTACT</a>
+    </div>
+    <div class="resume-badge">⊞ DOWNLOAD TECHNICAL SPEC (RÉSUMÉ)</div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-svg-wrap">
+      <!-- HERO BLUEPRINT ILLUSTRATION — Human Figure as Technical Diagram -->
+      <svg class="hero-svg" width="420" height="480" viewBox="0 0 420 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="rgba(92,115,255,0.6)"/>
+          </marker>
+        </defs>
+        <!-- Grid lines -->
+        <line x1="0" y1="60" x2="420" y2="60" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="0" y1="120" x2="420" y2="120" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="0" y1="180" x2="420" y2="180" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="0" y1="240" x2="420" y2="240" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="0" y1="300" x2="420" y2="300" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="0" y1="360" x2="420" y2="360" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="0" y1="420" x2="420" y2="420" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="60" y1="0" x2="60" y2="480" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="120" y1="0" x2="120" y2="480" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="180" y1="0" x2="180" y2="480" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="240" y1="0" x2="240" y2="480" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="300" y1="0" x2="300" y2="480" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <line x1="360" y1="0" x2="360" y2="480" stroke="rgba(92,115,255,0.08)" stroke-width="0.5"/>
+        <!-- Head outline -->
+        <!--<circle cx="210" cy="80" r="44" stroke="rgba(92,115,255,0.6)" stroke-width="0.8" fill="none"/>
+         Brain circuit inside head 
+        <path d="M188,70 Q200,60 210,68 Q220,60 232,70 Q236,80 228,88 Q220,96 210,90 Q200,96 192,88 Q184,80 188,70Z" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" fill="none"/>
+        <circle cx="210" cy="78" r="3" stroke="rgba(92,115,255,0.5)" stroke-width="0.5" fill="none"/>
+        <line x1="210" y1="75" x2="210" y2="68" stroke="rgba(92,115,255,0.3)" stroke-width="0.5"/>
+        <line x1="207" y1="78" x2="200" y2="78" stroke="rgba(92,115,255,0.3)" stroke-width="0.5"/>
+        <line x1="213" y1="78" x2="220" y2="78" stroke="rgba(92,115,255,0.3)" stroke-width="0.5"/>
+         Shoulder line 
+        <line x1="130" y1="152" x2="290" y2="152" stroke="rgba(92,115,255,0.5)" stroke-width="0.8"/>
+        Torso outline -->
+        <!--<path d="M155,152 L145,280 L180,290 L210,285 L240,290 L275,280 L265,152Z" stroke="rgba(92,115,255,0.5)" stroke-width="0.8" fill="none"/>
+         Internal systems grid in torso -->
+        <!--line x1="155" y1="185" x2="265" y2="185" stroke="rgba(92,115,255,0.12)" stroke-width="0.5" stroke-dasharray="4,4"/>
+        <line x1="155" y1="218" x2="265" y2="218" stroke="rgba(92,115,255,0.12)" stroke-width="0.5" stroke-dasharray="4,4"/>
+        <line x1="155" y1="251" x2="265" y2="251" stroke="rgba(92,115,255,0.12)" stroke-width="0.5" stroke-dasharray="4,4"/>
+       AI core in chest -->
+        <!--<rect x="190" y="172" width="40" height="40" stroke="rgba(92,115,255,0.5)" stroke-width="0.8" fill="none"/>
+        <rect x="195" y="177" width="30" height="30" stroke="rgba(92,115,255,0.25)" stroke-width="0.5" fill="none"/>
+        <text x="210" y="195" text-anchor="middle" font-family="VT323" font-size="9" fill="rgba(92,115,255,0.5)">AI CORE</text>
+         Arms -->
+        <!--<line x1="155" y1="160" x2="110" y2="240" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+        <line x1="110" y1="240" x2="95" y2="300" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+        <line x1="265" y1="160" x2="310" y2="240" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+        <line x1="310" y1="240" x2="325" y2="300" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+         Legs -->
+        <!--<line x1="180" y1="288" x2="168" y2="400" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+        <line x1="168" y1="400" x2="162" y2="460" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+        <line x1="240" y1="288" x2="252" y2="400" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+        <line x1="252" y1="400" x2="258" y2="460" stroke="rgba(92,115,255,0.4)" stroke-width="0.8"/>
+        ANNOTATION LINES — visible on hover via CSS -->
+        <!-- Head annotation -->
+        <!--<line class="ann-line" x1="256" y1="58" x2="320" y2="40" stroke="rgba(92,115,255,0)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        Torso annotation -->
+        <!--<line class="ann-line" x1="265" y1="210" x2="348" y2="210" stroke="rgba(92,115,255,0)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <!-- Measurement lines -->
+        <!--<line x1="70" y1="36" x2="70" y2="460" stroke="rgba(92,115,255,0.12)" stroke-width="0.5"/>
+        <line x1="66" y1="36" x2="74" y2="36" stroke="rgba(92,115,255,0.2)" stroke-width="0.5"/>
+        <line x1="66" y1="460" x2="74" y2="460" stroke="rgba(92,115,255,0.2)" stroke-width="0.5"/>
+        <text x="55" y="250" text-anchor="middle" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.3)" transform="rotate(-90,55,250)">HEIGHT: 1.0 UNIT</text>
+         Callout labels -->
+        <!--<line x1="256" y1="60" x2="298" y2="48" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" stroke-dasharray="2,3"/>
+        <text x="302" y="46" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.5)">NEURAL PROC.</text>
+        <line x1="266" y1="195" x2="350" y2="195" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" stroke-dasharray="2,3"/>
+        <text x="354" y="198" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.5)">AI / ML CORE</text>
+        <line x1="315" y1="268" x2="358" y2="268" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" stroke-dasharray="2,3"/>
+        <text x="362" y="271" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.5)">DATA PIPELINE</text>
+        <line x1="103" y1="268" x2="46" y2="268" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" stroke-dasharray="2,3"/>
+        <text x="8" y="271" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.5)">DESIGN SYS.</text>
+         Crosshair at center mass -->
+        <!--<circle cx="210" cy="240" r="16" stroke="rgba(92,115,255,0.15)" stroke-width="0.5" fill="none"/>
+        <line x1="194" y1="240" x2="200" y2="240" stroke="rgba(92,115,255,0.2)" stroke-width="0.5"/>
+        <line x1="220" y1="240" x2="226" y2="240" stroke="rgba(92,115,255,0.2)" stroke-width="0.5"/>
+        <line x1="210" y1="224" x2="210" y2="230" stroke="rgba(92,115,255,0.2)" stroke-width="0.5"/>
+        <line x1="210" y1="250" x2="210" y2="256" stroke="rgba(92,115,255,0.2)" stroke-width="0.5"/>
+       Figure label -->
+       text x="210" y="476" text-anchor="middle" font-family="VT323" font-size="11" fill="rgba(92,115,255,0.4)" letter-spacing="2">FIG. 0.1 — SUBJECT OVERVIEW</text>
+      </svg>
+      <!--<div class="hero-annotation top-right">PROCESSING UNIT: ACTIVE</div>-->
+      <!--<div class="hero-annotation bottom-right">OUTPUT: OPEN TO WORK</div>-->
+    </div>
+  </div>
+
+  <div class="scroll-hint">▼ SCROLL TO EXPLORE DOCUMENTATION</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 01 — SYSTEM OVERVIEW</span>
+  <span class="sec-num">FIG.1.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">ABOUT</h2>
+    <span class="sec-caption">Biography & Specifications</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="about-grid">
+    <div class="about-index">
+      <div>01.1 — BACKGROUND</div>
+      <div>01.2 — APPROACH</div>
+      <div>01.3 — PHILOSOPHY</div>
+      <div>01.4 — INTERESTS</div>
+      <div class="toc-note">FIG. 1.1 — TABLE OF CONTENTS</div>
+    </div>
+    <div class="about-main">
+      <p>I am an <strong>AI Engineer and Data Scientist</strong> who thinks in systems and designs in experiences. My work lives at the boundary where machine learning models meet human interfaces — where a model's output becomes a product someone actually uses.</p>
+      <p>Trained in computer science, self-taught in design, and perpetually curious about why things work the way they do. I don't just build models — I build the reasoning and the visual clarity around them.</p>
+      <p>Currently seeking roles where <strong>technical depth and creative thinking</strong> are equally valued. I thrive when the problem is ambiguous and the solution needs to be both rigorous and human.</p>
+      <svg width="100%" height="100" viewBox="0 0 500 100" class="svg-capability">
+        <text x="0" y="40" font-family="VT323" font-size="11" fill="rgba(92,115,255,0.4)" letter-spacing="2">CAPABILITY SPECTRUM</text>
+        <line x1="0" y1="60" x2="500" y2="60" stroke="rgba(92,115,255,0.15)" stroke-width="0.5"/>
+        <line x1="0" y1="55" x2="0" y2="65" stroke="rgba(92,115,255,0.3)" stroke-width="0.5"/>
+        <text x="2" y="78" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.5)">PURE ENGINEERING</text>
+        <line x1="250" y1="55" x2="250" y2="65" stroke="rgba(92,115,255,0.3)" stroke-width="0.5"/>
+        <text x="215" y="78" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.5)">INTERSECTION</text>
+        <line x1="500" y1="55" x2="500" y2="65" stroke="rgba(92,115,255,0.3)" stroke-width="0.5"/>
+        <text x="440" y="78" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.5)">PURE DESIGN</text>
+        <!-- Position indicator -->
+        <circle cx="310" cy="60" r="5" fill="rgba(92,115,255,0.6)" stroke="none"/>
+        <text x="295" y="50" font-family="VT323" font-size="9" fill="rgba(92,115,255,0.5)">YOU ARE HERE</text>
+        <line x1="308" y1="48" x2="308" y2="55" stroke="rgba(92,115,255,0.3)" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <div class="about-right">
+      <div class="blueprint-computer">
+        <img src="computer.png" alt="" class="blueprint-computer__img">
+        <span class="blueprint-computer__greeting">Hi!</span>
+        <div class="blueprint-computer__crt" aria-hidden="true"></div>
+      </div>
+      <div class="about-specs">
+        <div class="spec-row"><span class="spec-key">DESIGNATION</span><span class="spec-val">AI ENGINEER</span></div>
+        <div class="spec-row"><span class="spec-key">EXPERIENCE</span><span class="spec-val">X YEARS</span></div>
+        <div class="spec-row"><span class="spec-key">EDUCATION</span><span class="spec-val">B.TECH / M.TECH</span></div>
+        <div class="spec-row"><span class="spec-key">LOCATION</span><span class="spec-val">INDIA</span></div>
+        <div class="spec-row"><span class="spec-key">STATUS</span><span class="spec-val spec-val-blue">OPEN TO WORK</span></div>
+        <div class="spec-row"><span class="spec-key">LANGUAGES</span><span class="spec-val">PY / JS / SQL</span></div>
+        <div class="spec-row"><span class="spec-key">MODE</span><span class="spec-val">BUILDER</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 02 — DEPLOYMENT HISTORY</span>
+  <span class="sec-num">FIG.2.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">EXPERIENCE</h2>
+    <span class="sec-caption">Operational Log — Reverse Chronological</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="exp-timeline">
+    <div class="exp-line"></div>
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-year">2024 — PRESENT // UNIT 04</div>
+      <div class="exp-title">SENIOR AI ENGINEER</div>
+      <div class="exp-company">Company Name · Full-time</div>
+      <p class="exp-desc">Led development of [X] AI system, reducing [metric] by [N]%. Designed and deployed end-to-end ML pipelines handling [scale] data. Collaborated across product, design, and engineering to ship [product].</p>
+      <div class="exp-tags">
+        <span class="exp-tag">LLMs</span>
+        <span class="exp-tag">PYTORCH</span>
+        <span class="exp-tag">DATA ENG</span>
+        <span class="exp-tag">PRODUCT</span>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-year">2022 — 2024 // UNIT 03</div>
+      <div class="exp-title">DATA SCIENTIST</div>
+      <div class="exp-company">Company Name · Full-time</div>
+      <p class="exp-desc">Built predictive models for [domain]. Translated complex analyses into executive-facing dashboards and data stories. Worked closely with UX to make data products intuitive.</p>
+      <div class="exp-tags">
+        <span class="exp-tag">SKLEARN</span>
+        <span class="exp-tag">TABLEAU</span>
+        <span class="exp-tag">PYTHON</span>
+        <span class="exp-tag">SQL</span>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-year">2021 — 2022 // UNIT 02</div>
+      <div class="exp-title">ML ENGINEER INTERN</div>
+      <div class="exp-company">Company Name · Internship</div>
+      <p class="exp-desc">First production ML system. Learned to write code that survives contact with real data. Built [feature] that [impact].</p>
+      <div class="exp-tags">
+        <span class="exp-tag">NLP</span>
+        <span class="exp-tag">FASTAPI</span>
+        <span class="exp-tag">DOCKER</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 03 — ARTEFACT REPOSITORY</span>
+  <span class="sec-num">FIG.3.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">PROJECTS</h2>
+    <span class="sec-caption">Selected Works — Technical & Creative</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="proj-num">P.001 — AI SYSTEMS</div>
+      <div class="proj-title">MULTI-MODAL<br>REASONING ENGINE</div>
+      <p class="proj-desc">An LLM pipeline that processes documents, images, and structured data to generate analyst-grade summaries for enterprise clients.</p>
+      <div class="proj-stack">PYTHON · LANGCHAIN · GPT-4V · FASTAPI</div>
+      <div class="proj-arrow">↗</div>
+    </div>
+    <div class="project-card">
+      <div class="proj-num">P.002 — DATA PRODUCT</div>
+      <div class="proj-title">REAL-TIME<br>ANOMALY DETECTOR</div>
+      <p class="proj-desc">Streaming anomaly detection on IoT sensor data. Processes 50K events/sec with sub-100ms latency alerts and visual triage dashboard.</p>
+      <div class="proj-stack">KAFKA · FLINK · REACT · D3.JS</div>
+      <div class="proj-arrow">↗</div>
+    </div>
+    <div class="project-card">
+      <div class="proj-num">P.003 — DESIGN + CODE</div>
+      <div class="proj-title">AI-NATIVE<br>DESIGN SYSTEM</div>
+      <p class="proj-desc">Component library and design token system built specifically for AI product interfaces — handling states, uncertainty, and streaming responses.</p>
+      <div class="proj-stack">FIGMA · REACT · STORYBOOK · TS</div>
+      <div class="proj-arrow">↗</div>
+    </div>
+    <div class="project-card">
+      <div class="proj-num">P.004 — NLP</div>
+      <div class="proj-title">SEMANTIC SEARCH<br>INFRASTRUCTURE</div>
+      <p class="proj-desc">Vector search over a 2M document corpus. Custom embedding fine-tuning on domain data improved retrieval precision by 34%.</p>
+      <div class="proj-stack">PGVECTOR · SENTENCE-TRANSFORMERS · ELASTIC</div>
+      <div class="proj-arrow">↗</div>
+    </div>
+    <div class="project-card">
+      <div class="proj-num">P.005 — ANALYTICS</div>
+      <div class="proj-title">BEHAVIORAL<br>ATTRIBUTION MODEL</div>
+      <p class="proj-desc">Multi-touch attribution model for a fintech product. Replaced last-click attribution and improved marketing ROI measurement accuracy.</p>
+      <div class="proj-stack">DBT · BIGQUERY · LOOKER · R</div>
+      <div class="proj-arrow">↗</div>
+    </div>
+    <div class="project-card">
+      <div class="proj-num">P.006 — CREATIVE TECH</div>
+      <div class="proj-title">GENERATIVE<br>VISUAL SYSTEM</div>
+      <p class="proj-desc">Diffusion-model pipeline that generates brand-consistent product visuals. Reduced design iteration cycles from days to minutes.</p>
+      <div class="proj-stack">STABLE DIFFUSION · COMFYUI · LORA · TS</div>
+      <div class="proj-arrow">↗</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 04 — CAPABILITY MATRIX</span>
+  <span class="sec-num">FIG.4.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">SKILLS</h2>
+    <span class="sec-caption">Technical Proficiency Map</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="skills-layout">
+    <div>
+      <div class="skill-cluster">
+        <div class="cluster-label">// AI & MACHINE LEARNING</div>
+        <div class="skill-bar-row"><span class="skill-name">LLMs & PROMPT ENG</span><div class="skill-track w92"><div class="skill-fill"></div></div><span class="skill-pct">92%</span></div>
+        <div class="skill-bar-row"><span class="skill-name">PYTORCH / TENSORFLOW</span><div class="skill-track w80"><div class="skill-fill"></div></div><span class="skill-pct">80%</span></div>
+        <div class="skill-bar-row"><span class="skill-name">NLP / TRANSFORMERS</span><div class="skill-track w85"><div class="skill-fill"></div></div><span class="skill-pct">85%</span></div>
+        <div class="skill-bar-row"><span class="skill-name">ML OPS / DEPLOYMENT</span><div class="skill-track w78"><div class="skill-fill"></div></div><span class="skill-pct">78%</span></div>
+      </div>
+      <div class="skill-cluster">
+        <div class="cluster-label">// DATA ENGINEERING</div>
+        <div class="skill-bar-row"><span class="skill-name">PYTHON / SQL</span><div class="skill-track w95"><div class="skill-fill"></div></div><span class="skill-pct">95%</span></div>
+        <div class="skill-bar-row"><span class="skill-name">SPARK / KAFKA</span><div class="skill-track w70"><div class="skill-fill"></div></div><span class="skill-pct">70%</span></div>
+        <div class="skill-bar-row"><span class="skill-name">DBT / DATA MODELING</span><div class="skill-track w80"><div class="skill-fill"></div></div><span class="skill-pct">80%</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="skill-cluster">
+        <div class="cluster-label">// DESIGN & FRONTEND</div>
+        <div class="skill-bar-row"><span class="skill-name">FIGMA / DESIGN SYS</span><div class="skill-track w82"><div class="skill-fill"></div></div><span class="skill-pct">82%</span></div>
+        <div class="skill-bar-row"><span class="skill-name">REACT / TYPESCRIPT</span><div class="skill-track w75"><div class="skill-fill"></div></div><span class="skill-pct">75%</span></div>
+        <div class="skill-bar-row"><span class="skill-name">DATA VISUALIZATION</span><div class="skill-track w88"><div class="skill-fill"></div></div><span class="skill-pct">88%</span></div>
+      </div>
+      <div class="skill-cluster">
+        <div class="cluster-label">// SYSTEMS DIAGRAM</div>
+        <!-- Mini skills network SVG -->
+        <svg width="100%" height="200" viewBox="0 0 320 200">
+          <circle cx="160" cy="100" r="28" stroke="rgba(92,115,255,0.5)" stroke-width="0.8" fill="none"/>
+          <text x="160" y="97" text-anchor="middle" font-family="VT323" font-size="9" fill="rgba(92,115,255,0.7)">YOU</text>
+          <text x="160" y="108" text-anchor="middle" font-family="VT323" font-size="8" fill="rgba(92,115,255,0.4)">CORE</text>
+          <!-- Nodes -->
+          <circle cx="60" cy="50" r="18" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" fill="none"/>
+          <text x="60" y="53" text-anchor="middle" font-family="VT323" font-size="8" fill="rgba(92,115,255,0.5)">AI/ML</text>
+          <circle cx="260" cy="50" r="18" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" fill="none"/>
+          <text x="260" y="53" text-anchor="middle" font-family="VT323" font-size="8" fill="rgba(92,115,255,0.5)">DESIGN</text>
+          <circle cx="60" cy="160" r="18" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" fill="none"/>
+          <text x="60" y="163" text-anchor="middle" font-family="VT323" font-size="8" fill="rgba(92,115,255,0.5)">DATA</text>
+          <circle cx="260" cy="160" r="18" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" fill="none"/>
+          <text x="260" y="163" text-anchor="middle" font-family="VT323" font-size="8" fill="rgba(92,115,255,0.5)">WRITE</text>
+          <circle cx="160" cy="16" r="14" stroke="rgba(92,115,255,0.3)" stroke-width="0.5" fill="none"/>
+          <text x="160" y="19" text-anchor="middle" font-family="VT323" font-size="8" fill="rgba(92,115,255,0.5)">PROD</text>
+          <!-- Connecting lines -->
+          <line x1="132" y1="82" x2="78" y2="62" stroke="rgba(92,115,255,0.2)" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <line x1="188" y1="82" x2="242" y2="62" stroke="rgba(92,115,255,0.2)" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <line x1="132" y1="115" x2="78" y2="145" stroke="rgba(92,115,255,0.2)" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <line x1="188" y1="115" x2="242" y2="145" stroke="rgba(92,115,255,0.2)" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <line x1="160" y1="72" x2="160" y2="30" stroke="rgba(92,115,255,0.2)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certifications">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 05 — CREDENTIALS ARCHIVE</span>
+  <span class="sec-num">FIG.5.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">CERTIFICATIONS</h2>
+    <span class="sec-caption">Verified Competencies</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-badge"></div>
+      <div class="cert-issuer">GOOGLE / DEEPMIND</div>
+      <div class="cert-name">PROFESSIONAL ML ENGINEER</div>
+      <div class="cert-year">ISSUED: 2024</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge"></div>
+      <div class="cert-issuer">AWS</div>
+      <div class="cert-name">ML SPECIALTY</div>
+      <div class="cert-year">ISSUED: 2023</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge"></div>
+      <div class="cert-issuer">DEEPLEARNING.AI</div>
+      <div class="cert-name">ML SPECIALIZATION</div>
+      <div class="cert-year">ISSUED: 2022</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge"></div>
+      <div class="cert-issuer">DATABRICKS</div>
+      <div class="cert-name">ASSOCIATE DATA ENGINEER</div>
+      <div class="cert-year">ISSUED: 2023</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge"></div>
+      <div class="cert-issuer">COURSERA / META</div>
+      <div class="cert-name">PRODUCT ANALYTICS</div>
+      <div class="cert-year">ISSUED: 2022</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-badge"></div>
+      <div class="cert-issuer">INTERACTION DESIGN FND</div>
+      <div class="cert-name">UX DESIGN FUNDAMENTALS</div>
+      <div class="cert-year">ISSUED: 2021</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WRITING ===== -->
+<section id="writing">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 06 — TRANSMISSIONS LOG</span>
+  <span class="sec-num">FIG.6.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">WRITING</h2>
+    <span class="sec-caption">Essays, Thought Experiments & Technical Notes</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="writing-list">
+    <div class="writing-item">
+      <div class="writing-date">MAY<br>2025</div>
+      <div>
+        <div class="writing-title">The UX of Uncertainty: Designing AI Interfaces That Earn Trust</div>
+        <p class="writing-excerpt">When a model isn't sure, should it say so? How do you design for epistemic honesty without breaking the experience?</p>
+        <span class="writing-tag">AI DESIGN</span>
+      </div>
+      <div class="reading-time">8 MIN READ ↗</div>
+    </div>
+    <div class="writing-item">
+      <div class="writing-date">FEB<br>2025</div>
+      <div>
+        <div class="writing-title">From Notebook to Production: What Data Science School Doesn't Teach</div>
+        <p class="writing-excerpt">The gap between a Jupyter notebook that works and a system that survives real users is larger than most people think.</p>
+        <span class="writing-tag">ML ENG</span>
+      </div>
+      <div class="reading-time">12 MIN READ ↗</div>
+    </div>
+    <div class="writing-item">
+      <div class="writing-date">NOV<br>2024</div>
+      <div>
+        <div class="writing-title">Data Products Are Products: Why Engineers Should Think Like PMs</div>
+        <p class="writing-excerpt">Technical excellence without product sense produces elegant systems that no one uses. A framework for thinking differently.</p>
+        <span class="writing-tag">PRODUCT</span>
+      </div>
+      <div class="reading-time">6 MIN READ ↗</div>
+    </div>
+    <div class="writing-item">
+      <div class="writing-date">AUG<br>2024</div>
+      <div>
+        <div class="writing-title">Vector Databases Are Not Magic: A Pragmatic Guide to Retrieval</div>
+        <p class="writing-excerpt">Semantic search is powerful. It is also frequently misapplied. A practical guide to when embeddings help and when they hurt.</p>
+        <span class="writing-tag">TECHNICAL</span>
+      </div>
+      <div class="reading-time">15 MIN READ ↗</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AFTER 9 TO 5 ===== -->
+<section id="after">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 07 — AUXILIARY PROCESSES</span>
+  <span class="sec-num">FIG.7.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">SIDE QUESTS</h2>
+    <span class="sec-caption">Non-Computational Outputs & Visual Experiments</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="after-grid">
+    <div class="after-column">
+      <h3>// PHOTOGRAPHY LOG</h3>
+      <p class="after-paragraph">I shoot on film. Mostly architecture, found geometry, and moments where the light does something unexpected. Photography taught me to see compositions before I see content — a skill that transferred directly into design.</p>
+      <div class="photo-grid">
+        <div class="photo-placeholder">IMG_001<br>UPLOAD</div>
+        <div class="photo-placeholder">IMG_002<br>UPLOAD</div>
+        <div class="photo-placeholder">IMG_003<br>UPLOAD</div>
+        <div class="photo-placeholder">IMG_004<br>UPLOAD</div>
+      </div>
+    </div>
+    <div class="after-column">
+      <h3>// DOODLE ARCHIVE</h3>
+      <p class="after-paragraph">Rough sketches, system maps, and diagrams I made thinking through problems. Most never shipped. All were useful.</p>
+      <div class="doodle-area">
+        <!-- Inline doodle SVG -->
+        <svg width="100%" height="220" viewBox="0 0 300 220">
+          <!-- Sketch-style brain + code -->
+          <path d="M90,80 Q80,60 95,50 Q115,38 130,52 Q145,40 160,52 Q175,38 190,52 Q210,60 200,80 Q212,95 200,110 Q190,125 175,118 Q165,128 150,122 Q135,128 125,118 Q110,125 100,110 Q88,95 90,80Z" stroke="rgba(92,115,255,0.35)" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <path d="M130,52 Q135,70 130,80" stroke="rgba(92,115,255,0.2)" stroke-width="0.8" fill="none"/>
+          <path d="M160,52 Q155,70 160,80" stroke="rgba(92,115,255,0.2)" stroke-width="0.8" fill="none"/>
+          <path d="M90,80 Q120,75 150,78 Q180,75 200,80" stroke="rgba(92,115,255,0.2)" stroke-width="0.8" fill="none"/>
+          <text x="120" y="92" font-family="VT323" font-size="10" fill="rgba(92,115,255,0.4)">THINKING</text>
+          <!-- Arrow down -->
+          <line x1="150" y1="128" x2="150" y2="148" stroke="rgba(92,115,255,0.25)" stroke-width="0.8" stroke-dasharray="2,2"/>
+          <polygon points="145,148 155,148 150,155" fill="rgba(92,115,255,0.25)"/>
+          <!-- Code block -->
+          <rect x="95" y="158" width="110" height="40" stroke="rgba(92,115,255,0.25)" stroke-width="0.5" fill="none"/>
+          <text x="103" y="173" font-family="VT323" font-size="9" fill="rgba(92,115,255,0.4)">model.fit(data)</text>
+          <text x="103" y="186" font-family="VT323" font-size="9" fill="rgba(92,115,255,0.4)">→ insights</text>
+          <!-- Annotation -->
+          <line x1="205" y1="80" x2="250" y2="65" stroke="rgba(92,115,255,0.2)" stroke-width="0.5" stroke-dasharray="2,3"/>
+          <text x="252" y="63" font-family="VT323" font-size="9" fill="rgba(92,115,255,0.35)">RIGHT BRAIN</text>
+          <line x1="205" y1="178" x2="250" y2="178" stroke="rgba(92,115,255,0.2)" stroke-width="0.5" stroke-dasharray="2,3"/>
+          <text x="252" y="181" font-family="VT323" font-size="9" fill="rgba(92,115,255,0.35)">LEFT BRAIN</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="corner-tl"></div><div class="corner-tr"></div>
+  <div class="corner-bl"></div><div class="corner-br"></div>
+  <span class="sec-label">SECTION 08 — COMMUNICATION TERMINAL</span>
+  <span class="sec-num">FIG.8.0</span>
+
+  <div class="sec-header">
+    <h2 class="sec-title">CONTACT</h2>
+    <span class="sec-caption">Open a Transmission</span>
+  </div>
+  <div class="sec-rule"></div>
+
+  <div class="contact-layout">
+    <div class="contact-left">
+      <p class="contact-tagline">"Every great system begins with a conversation about what it should do."</p>
+      <p class="contact-intro">I'm actively looking for roles in AI engineering, ML, data science, design engineering, and creative technology. If you're building something interesting, I want to hear about it.</p>
+      <div class="contact-links">
+        <a href="mailto:vidhisha.katariya@gmail.com" class="contact-link"><span class="contact-link-icon">✉</span>vidhisha.katariya@gmail.com</a>
+        <a href="https://www.linkedin.com/in/vidhishakatariya/" class="contact-link"><span class="contact-link-icon">in</span>Linkedin</a>
+        <a href="https://github.com/VIDHISHAK15" class="contact-link"><span class="contact-link-icon">gh</span>Github</a>
+        <a href="https://x.com/vidhishaka87092" class="contact-link"><span class="contact-link-icon">tw</span>Twitter</a>
+        <!--<a href="#" class="contact-link"><span class="contact-link-icon">✎</span>medium.com/@yourname</-->
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="transmission-box">
+        <div class="form-field">
+          <label class="form-label">SENDER DESIGNATION</label>
+          <input type="text" class="form-input" placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label class="form-label">TRANSMISSION ADDRESS</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-field">
+          <label class="form-label">SUBJECT LINE</label>
+          <input type="text" class="form-input" placeholder="Re: Building something interesting">
+        </div>
+        <div class="form-field">
+          <label class="form-label">MESSAGE BODY</label>
+          <textarea class="form-textarea" placeholder="Tell me about what you're building..."></textarea>
+        </div>
+        <button class="form-submit">TRANSMIT MESSAGE ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="site-footer">
+    <span class="footer-line">PORTFOLIO DOC v2.6 — YOUR NAME — 2025</span>
+    <span class="footer-line footer-line--dim">ALL SYSTEMS NOMINAL</span>
+    <span class="footer-line">MADE WITH PRECISION & CURIOSITY</span>
+  </div>
+</section>
+
+</div><!-- /content -->
+
+<script src="port.js"></script>
+</body>
+</html>
