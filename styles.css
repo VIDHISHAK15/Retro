@@ -534,7 +534,7 @@ section:not(:last-child){
   color:rgba(92,115,255,0.7);letter-spacing:3px;margin-bottom:24px;
 }
 .photo-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap: 10px;
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
   padding:4%;
 
 }
