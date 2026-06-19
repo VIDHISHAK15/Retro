@@ -135,8 +135,9 @@ section:not(:last-child){
 /* ======= HERO ======= */
 #hero{
   display:grid;grid-template-columns:1fr 1fr;
-  gap:60px;align-items:center;min-height:100vh;
-  padding-top:120px;
+  align-items:center;min-height:100vh;
+  margin-top: -200px;
+
 }
 .hero-left{position:relative}
 .hero-tag{
@@ -334,7 +335,7 @@ section:not(:last-child){
 .exp-item{
   position:relative;margin-bottom:56px;
   transform:translateX(-10px);
-  transition:all 0.5s ease;
+  transition:all 0.8s ease-in-out ;
 }
 .exp-item.visible{opacity:1;transform:translateX(0)}
 .exp-dot{
@@ -495,7 +496,7 @@ section:not(:last-child){
 .cert-card:hover .cert-badge::after{background:var(--blue)}
 
 /* ======= WRITING ======= */
-#writing{background:#F7F7F5}
+#writing{padding-top:100px;padding-bottom:100px;background:#F7F7F5}
 .writing-list{margin-top:60px}
 .writing-item{
   display:grid;grid-template-columns:80px 1fr 140px;
@@ -507,6 +508,13 @@ section:not(:last-child){
 .writing-date{
   font-family:'VT323',monospace;font-size:13px;
   color:rgba(92,115,255,0.6);letter-spacing:1px;padding-top:4px;
+}
+.banner{
+  
+padding-top: 50px;
+font-family:'VT323',monospace;font-size:30px;
+text-align:center;
+color:rgba(92,115,255,0.6);letter-spacing:1px;padding-top:4px;
 }
 .writing-title{
   font-family:'Cormorant Garamond',serif;
