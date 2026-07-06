@@ -65,20 +65,15 @@ if (blueprintComputer) {
 
 // Click sound effect
 const clickSound = new Audio("matthewvakaliuk73627-mouse-click-290204.mp3");
-function playClickSound() {
-  clickSound.currentTime = 0;
-  clickSound.play().catch(() => {});
-}
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', playClickSound);
+document.addEventListener("click", (e) => {
+  if (
+    e.target.closest(".nav-links a, .form-submit, .btn-primary, .btn-ghost, .resume-badge")
+  ) {
+    const sound = clickSound.cloneNode();
+    sound.play().catch(() => {});
+  }
 });
-
-document.querySelector('.form-submit')
-  ?.addEventListener('click', playClickSound);
-
-
-
 
 // Contact form email sending
 
@@ -156,15 +151,85 @@ if (navToggle && navLinks) {
   });
 }
 
-// Resume download placeholder
-const resumeBadge = document.querySelector('.resume-badge');
-if (resumeBadge) {
-  resumeBadge.addEventListener('click', () => {
-    alert('Resume download would go here');
+const flowSection = document.querySelector('.photo-flow');
+const flowCards = document.querySelectorAll('.flow-card');
+
+if (flowSection && flowCards.length) {
+  const activeIndex = { value: 0 };
+  const state = new Map();
+  const velocity = new Map();
+  const idleTarget = 0.95;
+  const activeTarget = 5.6;
+  const stiffness = 0.11;
+  const damping = 0.72;
+
+  flowCards.forEach((card, index) => {
+    state.set(card, index === 0 ? activeTarget : idleTarget);
+    velocity.set(card, 0);
+    card.style.flexGrow = String(index === 0 ? activeTarget : idleTarget);
+
+    const activate = () => {
+      activeIndex.value = index;
+      flowCards.forEach((item, itemIndex) => {
+        item.classList.toggle('is-active', itemIndex === index);
+        item.setAttribute('aria-pressed', String(itemIndex === index));
+      });
+      if (!animationId) {
+        animationId = requestAnimationFrame(animateFlow);
+      }
+    };
+
+    card.addEventListener('mouseenter', activate);
+    card.addEventListener('focus', activate);
+    card.addEventListener('click', activate);
   });
+
+  flowSection.addEventListener('mouseleave', () => {
+    activeIndex.value = 0;
+    flowCards.forEach((card, index) => {
+      card.classList.toggle('is-active', index === 0);
+      card.setAttribute('aria-pressed', String(index === 0));
+    });
+    if (!animationId) {
+      animationId = requestAnimationFrame(animateFlow);
+    }
+  });
+
+  let animationId = null;
+
+  function animateFlow() {
+    let running = false;
+
+    flowCards.forEach((card, index) => {
+      const target = index === activeIndex.value ? activeTarget : idleTarget;
+      const current = state.get(card) ?? idleTarget;
+      const currentVelocity = velocity.get(card) ?? 0;
+      const springForce = (target - current) * stiffness;
+      const nextVelocity = (currentVelocity + springForce) * damping;
+      const nextValue = current + nextVelocity;
+
+      state.set(card, nextValue);
+      velocity.set(card, nextVelocity);
+      card.style.flexGrow = String(nextValue);
+
+      if (Math.abs(target - nextValue) > 0.01 || Math.abs(nextVelocity) > 0.01) {
+        running = true;
+      } else {
+        state.set(card, target);
+        velocity.set(card, 0);
+        card.style.flexGrow = String(target);
+      }
+    });
+
+    if (running) {
+      animationId = requestAnimationFrame(animateFlow);
+    } else {
+      animationId = null;
+    }
+  }
+
+  animateFlow();
 }
-
-
 /*use client";
 
 import { useEffect, useRef } from "react";
