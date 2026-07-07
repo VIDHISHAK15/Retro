@@ -1,7 +1,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#F7F7F5;
-  --blue:#5C73FF;
+  --blue:#a2afff;
   --blue-dim:rgba(92,115,255,0.12);
   --blue-faint:rgba(92,115,255,0.06);
   --text:#111111;
@@ -25,6 +25,7 @@ body{
   color:#111111;
   font-family:'Cormorant Garamond',Georgia,serif;
   overflow-x:hidden;
+  padding:5%;
 }
 img,svg{max-width:100%;height:auto}
 
@@ -552,7 +553,7 @@ color:rgba(92,115,255,0.6);letter-spacing:1px;padding-top:4px;
 .photo-placeholder{
   
   aspect-ratio:1;background:rgba(92,115,255,0.06);
-  border: 30px solid #F7F7F5 ;padding: 20px;
+  padding:0px;
   display:flex;align-items:center;justify-content:center;
   color:rgba(12, 48, 10, 0.3);
   font-family:'VT323',monospace;font-size:11px;
@@ -572,7 +573,7 @@ color:rgba(92,115,255,0.6);letter-spacing:1px;padding-top:4px;
 .after-paragraph{ font-family:'Cormorant Garamond',serif;font-size:14px;color:#5A5A5A;line-height:1.8;margin-bottom:20px }
 .photo-flow{
   display:flex;align-items:stretch;gap:14px;
-  margin-top:32px;min-height:420px;
+  margin-top:32px;min-height:450px;
   isolation:isolate;
 }
 .flow-card{
@@ -586,7 +587,7 @@ color:rgba(92,115,255,0.6);letter-spacing:1px;padding-top:4px;
   background:
     linear-gradient(180deg,rgba(255,255,255,0.86),rgba(245,247,255,0.7)),
     #ececec;
-  border-radius:22px;
+  border-radius:20px;
   cursor:pointer;
   transform:translateY(var(--card-lift)) scale(var(--card-scale));
   transition:
@@ -612,8 +613,8 @@ color:rgba(92,115,255,0.6);letter-spacing:1px;padding-top:4px;
 .flow-card::before{
   content:'';position:absolute;inset:0;
   background:
-    linear-gradient(180deg,rgba(255,255,255,0.06),transparent 30%),
-    radial-gradient(circle at top left,rgba(92,115,255,0.22),transparent 52%);
+    linear-gradient(180deg,rgba(255,255,255,0.06),transparent 20%),
+    radial-gradient(circle at top left,rgba(92,115,255,0.22),transparent 32%);
   opacity:0;
   transition:opacity 0.45s ease;
   pointer-events:none;
