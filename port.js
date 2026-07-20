@@ -68,7 +68,7 @@ const clickSound = new Audio("matthewvakaliuk73627-mouse-click-290204.mp3");
 
 document.addEventListener("click", (e) => {
   if (
-    e.target.closest(".nav-links a, .form-submit, .btn-primary, .btn-ghost, .resume-badge")
+    e.target.closest(".nav-links a, .form-submit, .btn-primary, .btn-ghost, .resume-badge, .writing-title a,.nav-toggle")
   ) {
     const sound = clickSound.cloneNode();
     sound.play().catch(() => {});
