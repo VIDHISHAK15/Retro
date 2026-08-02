@@ -62,13 +62,29 @@ if (blueprintComputer) {
   blueprintObs.observe(blueprintComputer);
 }
 
+// About section specs animation
+const specs = document.querySelector('.about-specs');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            specs.classList.add('animate');
+        } else {
+            specs.classList.remove('animate');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+observer.observe(specs);
 
 // Click sound effect
 const clickSound = new Audio("matthewvakaliuk73627-mouse-click-290204.mp3");
 
 document.addEventListener("click", (e) => {
   if (
-    e.target.closest(".nav-links a, .form-submit, .btn-primary, .btn-ghost, .resume-badge, .writing-title a,.nav-toggle")
+    e.target.closest(".nav-links a, .form-submit, .btn-primary, .btn-ghost, .resume-badge, .writing-title a,.nav-toggle,.contact-links a,.flow-card")
   ) {
     const sound = clickSound.cloneNode();
     sound.play().catch(() => {});
