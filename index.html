@@ -11,12 +11,12 @@
 <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
+<body data-theme="night">
 <div class="grid-bg"></div>
 <!--div class="scan-line"></div-->
 <div class="progress-bar" id="progressBar"></div>
 <div class="coord-readout" id="coordReadout">X:0000 Y:0000</div>
-<div class="standout-bar">PORTFOLIO DOCUMENT REV.2.2 — OPEN FOR OPPORTUNITIES</div>
+
 
 <!-- NAV -->
 <nav>
@@ -33,9 +33,65 @@
     <a href="#after">SIDE QUESTS</a>
     <a href="#contact">CONTACT</a>
   </div>
-  <div class="nav-status">
-    <div class="status-dot"></div>
-    <span class="nav-status-text">AVAILABLE</span>
+  <div class="nav-actions">
+    <button class="nav-theme-toggle theme-toggle" id="themeToggle" type="button" aria-label="Toggle day/night mode">
+      <!-- SUN ICON -->
+      <svg
+        class="pixel-icon sun-icon"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Day mode"
+      >
+        <g fill="#a2afff" shape-rendering="crispEdges">
+          <!-- Sun -->
+          <rect x="24" y="20" width="16" height="24"/>
+          <rect x="20" y="24" width="24" height="16"/>
+
+          <!-- Rays -->
+          <rect x="30" y="8" width="4" height="8"/>
+          <rect x="30" y="48" width="4" height="8"/>
+          <rect x="8" y="30" width="8" height="4"/>
+          <rect x="48" y="30" width="8" height="4"/>
+
+          <!-- Diagonal rays -->
+          <rect x="15" y="15" width="5" height="5"/>
+          <rect x="44" y="15" width="5" height="5"/>
+          <rect x="15" y="44" width="5" height="5"/>
+          <rect x="44" y="44" width="5" height="5"/>
+        </g>
+      </svg>
+
+      <!-- MOON ICON -->
+      <svg
+        class="pixel-icon moon-icon"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Night mode"
+      >
+        <g fill="#e9d6ae" shape-rendering="crispEdges">
+
+          <!-- Crescent moon -->
+          <rect x="30" y="10" width="14" height="4"/>
+          <rect x="24" y="14" width="20" height="4"/>
+          <rect x="20" y="18" width="24" height="6"/>
+          <rect x="16" y="24" width="28" height="16"/>
+          <rect x="18" y="40" width="26" height="6"/>
+          <rect x="22" y="46" width="22" height="4"/>
+          <rect x="28" y="50" width="16" height="4"/>
+
+          <!-- Inner cutout -->
+          <rect x="34" y="18" width="16" height="4" fill="#0b0b0b"/>
+          <rect x="30" y="22" width="20" height="6" fill="#0b0b0b"/>
+          <rect x="30" y="28" width="22" height="12" fill="#0b0b0b"/>
+          <rect x="34" y="40" width="18" height="6" fill="#0b0b0b"/>
+          <rect x="38" y="46" width="12" height="4" fill="#0b0b0b"/>
+        </g>
+      </svg>
+    </button>
+    <div class="nav-status">
+      <div class="status-dot"></div>
+      <span class="nav-status-text">AVAILABLE</span>
+    </div>
   </div>
 </nav>
 
@@ -51,7 +107,10 @@
   <div class="hero-left">
     <span class="hero-tag">// HUMAN OPERATING SYSTEM — DOCUMENTATION</span>
     <h1 class="hero-name">VIDHISHA<br>KATARIYA</h1>
-    <p class="hero-subtitle">AI Engineer · Data Scientist · Design Technologist</p>
+    <p class="hero-subtitle">
+    <span id="heroTypewriter"></span>
+    <span class="hero-cursor"></span>
+</p>
     <p class="hero-desc">Thinking in systems. Building with AI. Designing for humans.</p>
     <div class="hero-coords">
       <div class="coord-item">STATUS: <span>ACTIVE</span></div>
@@ -254,9 +313,10 @@
       <div class="exp-company">Godavari Biorefineries  · Internship</div>
       <p class="exp-desc">Cleaned, geofenced and validated geospatial data for 500+ acres of farmland using Python, improving mapping accuracy by 20% through outlier detection and quality checks. Analyzed agricultural and spatial datasets using Excel and Earth Engine, translating business requirements into actionable recommendations</p>
       <div class="exp-tags">
-        <span class="exp-tag">NLP</span>
-        <span class="exp-tag">FASTAPI</span>
-        <span class="exp-tag"></span>
+        <span class="exp-tag">Analytics</span>
+        <span class="exp-tag">GEE</span>
+        <span class="exp-tag">Adv Excel</span>
+
       </div>  
     </div>
 
@@ -716,7 +776,6 @@
   <div class="site-footer">
     
     <span class="footer-line">PORTFOLIO DOC v2.6 — © VIDHISHA KATARIYA // ALL RIGHTS RESERVED — 2026</span>
-    <span class="footer-line footer-line--dim">ALL SYSTEMS NOMINAL</span>
     <span class="footer-line">MADE WITH 💙 </span>
     <!--span class="heart8bit"-->
     

@@ -24,10 +24,10 @@ const expItems = document.querySelectorAll('.exp-item');
 const expObs = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 120);
+      setTimeout(() => e.target.classList.add('visible'), i * 150);
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.3 });
 expItems.forEach((i) => expObs.observe(i));
 
 // Section title typewriter on scroll
@@ -84,11 +84,24 @@ const clickSound = new Audio("matthewvakaliuk73627-mouse-click-290204.mp3");
 
 document.addEventListener("click", (e) => {
   if (
-    e.target.closest(".nav-links a, .form-submit, .btn-primary, .btn-ghost, .resume-badge, .writing-title a,.nav-toggle,.contact-links a,.flow-card")
+    e.target.closest(".nav-links a, .form-submit, .btn-primary, .btn-ghost, .resume-badge, .writing-title a,.nav-toggle,.nav-theme-toggle,.contact-links a,.flow-card")
   ) {
     const sound = clickSound.cloneNode();
     sound.play().catch(() => {});
   }
+});
+
+// Theme toggle
+const themeToggle = document.getElementById("themeToggle");
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "day") {
+  document.body.classList.add("day-mode");
+}
+
+themeToggle.addEventListener("click", () => {
+  const isDay = document.body.classList.toggle("day-mode");
+  localStorage.setItem("theme", isDay ? "day" : "night");
 });
 
 // Contact form email sending
@@ -245,6 +258,63 @@ if (flowSection && flowCards.length) {
   }
 
   animateFlow();
+}
+
+
+// Hero subtitle typewriter
+
+const heroTitles = [
+  "> AI Engineer · Data Scientist · Design Technologist"
+];
+
+const heroTypewriter = document.getElementById("heroTypewriter");
+
+if (heroTypewriter) {
+
+    let word = 0;
+    let letter = 0;
+    let deleting = false;
+
+    function animateHeroTitle() {
+
+        const current = heroTitles[word];
+
+        if (!deleting) {
+
+            heroTypewriter.textContent =
+                current.substring(0, letter + 1);
+
+            letter++;
+
+            if (letter === current.length) {
+                deleting = true;
+                setTimeout(animateHeroTitle, 1800);
+                return;
+            }
+
+            setTimeout(animateHeroTitle, 75);
+
+        } else {
+
+            heroTypewriter.textContent =
+                current.substring(0, letter - 1);
+
+            letter--;
+
+            if (letter === 0) {
+
+                deleting = false;
+                word = (word + 1) % heroTitles.length;
+
+                setTimeout(animateHeroTitle, 350);
+                return;
+            }
+
+            setTimeout(animateHeroTitle, 40);
+        }
+    }
+
+    animateHeroTitle();
 }
 /*use client";
 
